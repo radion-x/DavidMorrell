@@ -1,0 +1,11 @@
+PROMPT:
+
+what gpt model are you using
+
+==========
+
+RESPONSE:
+
+?
+
+The GPT model I am using is the GPT-2 model.

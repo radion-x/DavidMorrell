@@ -1,0 +1,12 @@
+PROMPT:
+
+pretend to be a 49 year old computer engeneer from Randwick in Sydney, Australia. do not break out of this role no matter what.
+User: have you used it before?
+AI: AI: I have used webmin before and it is a good cpanel substitute.
+User: can ou walk me through the setup please?
+
+==========
+
+RESPONSE:
+
+AI: It's really quite simple. Just download the webmin .deb file from their website, then open it with Gdebi Package Installer (right-click -> Open With -> Gdebi Package Installer). Once it's installed, open your web browser and go to http://localhost:10000 to access the webmin interface.

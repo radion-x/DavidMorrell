@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <title>ChatBot</title>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Radion make responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: monospace;
+        background-color: #000;
+        background-image: url("https://cdn.pixabay.com/photo/2016/09/08/14/33/space-1654074_960_720.jpg");
+        background-size: cover;
+        color: #fff;
+      }
+      h1 {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        display: inline-block;
+        font-size: 3em;
+        margin: 0;
+        padding: 10px;
+        text-shadow: 2px 2px #ce13c8;
+      }
+     /* #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+        margin-top: 60px;
+      } */
+        #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%; /* Change to a higher value for wider chat area */
+        margin-top: 30px; /* Decrease for mobile devices */
+      }
+       /* #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 60px;
+      } */
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%; /* Change to a higher value for wider chat input box */
+        margin-top: 30px; /* Decrease for mobile devices */
+      }
+      #textInput {
+        width: 90%;
+        border: none;
+        border-bottom: 3px solid #fff;
+        font-family: monospace;
+        font-size: 17px;
+        margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .userText {
+        color: #fff;
+        font-family: monospace;
+        font-size: 1.2em; /* Increase the font size of the chat text */
+        line-height: 1.2; /* Increase the line height of the chat text */
+        text-align: right;
+        border-radius: 5px;
+        margin-top: 25px;
+      }
+      /* .userText span {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 7px;
+        box-shadow: 8px 7px 6px 5px rgba(0, 0, 0, 0.2);
+      } */
+      .botText {
+        color: #fff;
+        font-family: monospace;
+        font-size: 17px;
+        text-align: left;
+        line-height: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 7px;
+        box-shadow: 8px 7px 6px 5px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+      }
+      .botText span {
+        border-radius: 2px;
+      }
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      .boxed {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        margin-top: 60px;
+        border: 1px solid #96957A ;
+        background-color: rgba(247, 244, 178, 0.5);
+        border-radius: 10px;
+      }
+      .box {
+        border: 2px solid #000
+      }
+      .nice_girl {
+      display: block;
+      margin: 0 auto;
+      }
+      #nice_girl{
+        padding: 55px 0 0 0;
+      }
+      /* Media Queries go here to do on mobile devices under 768px wide */
+      @media (max-width: 768px) {
+        #chat-area {
+                width: 90%;
+                    }
+                }
+      #loading {
+      display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="nice_girl">
+      <!-- <img src="/Volumes/Blue S/ZONE/PycharmProjects/legalised/girl_white.png" alt="nice-girl" width="300" height="426" class="nice_girl"> -->
+      <!-- <img src="ginger_sml.png" alt="nice-girl" width="300" height="426" class="nice_girl"> -->
+      <img src="{{ url_for('static', filename='brandi.png') }}" alt="nice-girl" width="100" height="142" class="nice_girl">
+    </div>
+    <div class="box"></div>
+    <div id="chat-area" class="boxed">
+      <div>
+        <div id="chatbox">
+          <!-- <span><img src = "https://cdn.iconscout.com/icon/premium/png-256-thumb/ai-robot-5-1089411.png" alt = "Hello" width = "25"></span> -->
+         <span><img src="{{ url_for('static', filename='b_girl.png') }}" alt="go-girl" width="30" height="43"></span>
+         <span id="loading"><img src="{{ url_for('static', filename='loading_2.gif') }}" alt="loading" width="40"></span>
+         <span><p class="botText">
+            <span>Hi there darling... what would you like to chat about?</span>
+          </p></span>
+        </div> 
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Enter message here..." />
+        </div>
+      </div>
+      <script>
+    function getBotResponse() {
+    var image = '<img src="{{ url_for('static', filename='b_girl.png') }}" alt="go-girl" width="30" height="43">';
+    var rawText = $("#textInput").val();
+    var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+    $("#loading").show(); // Show the loading animation
+    $.get("/get", { msg: rawText }).done(function(data) {
+      var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+      var botWithImage = image + botHtml;
+      var lastBotMsg = $("#chatbox").children(".botText").last();
+      lastBotMsg.append('<span id="loading"><img src="{{ url_for('static', filename='loading_2.gif') }}" alt="loading" width="20"></span>');
+      $("#chatbox").append(botWithImage);
+      document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+      $("#loading").hide(); // Hide the loading animation
+    });
+    }
+
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

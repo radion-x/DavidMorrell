@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brandi Love</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="chat">
+        <div class="chat-header">
+          <div class="chat-logo">
+            <img src="{{ url_for('static', filename='brandi.png') }}" alt="ChatBot Logo">
+          </div>
+          <h1>Brandi</h1>
+        </div>
+        <div class="chat-body">
+          <div id="chatbox" class="chat-messages">
+            <div class="message">
+              <div class="message-text bot">
+                <p>Hi there big boy... what would you like to do to me?</p>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input">
+            <div id="loading-spinner">
+              <img src="{{ url_for('static', filename='46.gif') }}" alt="Loading...">
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+  </body>
+</html>

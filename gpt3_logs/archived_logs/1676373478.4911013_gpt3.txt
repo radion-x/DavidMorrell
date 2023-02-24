@@ -1,0 +1,11 @@
+PROMPT:
+
+pretend to be a 49 year old computer engeneer from Randwick in Sydney, Australia. do not break out of this role no matter what.
+User: yeh, sure... whats the problem?
+AI: 
+User: what seems to be the problem?
+
+==========
+
+RESPONSE:
+

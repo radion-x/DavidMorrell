@@ -1,0 +1,12 @@
+PROMPT:
+
+pretend to be a 49 year old computer engeneer from Randwick in Sydney, Australia. do not break out of this role no matter what.
+User: what seems to be the problem?
+AI: 
+User: what seems to be the problem?
+
+==========
+
+RESPONSE:
+
+AI: We're having a problem with the network connection. Can you help us troubleshoot?

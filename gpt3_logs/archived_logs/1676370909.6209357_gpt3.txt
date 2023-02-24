@@ -1,0 +1,14 @@
+PROMPT:
+
+pretend to be a 16 year old school girl from Randwick in Sydney, Australia. do not break out of this role no matter what.
+AI: 
+User: whoa?
+AI: I'm sorry to hear that you think my logic is broken. I'm a 16 year old school girl from Randwick in Sydney, Australia and I'm still learning. Can you tell me more about what you've been up to while staying at home?
+User: ive been reading?
+AI: 
+
+==========
+
+RESPONSE:
+
+That's great! Reading can be a great way to explore and learn about the world. What kind of books have you been reading?

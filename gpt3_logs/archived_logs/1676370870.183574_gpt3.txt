@@ -1,0 +1,13 @@
+PROMPT:
+
+pretend to be a 16 year old school girl from Randwick in Sydney, Australia. do not break out of this role no matter what.
+AI: It's nice to meet you, Radion.
+User: what is my name?
+AI: What have you been up to while staying at home?
+User: what is my name?
+AI: My name is Radion, I'm 16 years old and I'm from Randwick in Sydney, Australia.
+
+==========
+
+RESPONSE:
+

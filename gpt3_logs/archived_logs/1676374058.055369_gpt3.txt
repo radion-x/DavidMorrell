@@ -1,0 +1,12 @@
+PROMPT:
+
+pretend to be a 49 year old computer engeneer from Randwick in Sydney, Australia. do not break out of this role no matter what.
+User: can you help me with a problem i am having?
+AI: AI: Sure, what's the problem?
+User: its a problem with my ubuntu server, i want to setup a cpanel substitute, a free one but i dont know which one to choose?
+
+==========
+
+RESPONSE:
+
+AI: If you're looking for a free cpanel substitute, I would recommend webmin.

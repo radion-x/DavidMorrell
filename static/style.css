@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f6f6f6;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat {
+  background-color: #fff;
+  width: 500px;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.chat-logo img {
+  height: 50px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-left: 10px;
+  color: #333;
+}
+
+.chat-body {
+  padding: 20px;
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 20px;
+}
+
+.message-text {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.message-text.bot {
+  background-color: #eee;
+  align-self: flex-start;
+}
+
+.message-text.user {
+  background-color: #d4e4f7;
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#user-input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+#send-btn {
+margin-left: 10px;
+border: none;
+border-radius: 20px;
+padding: 10px 20px;
+background-color: #4d4dff;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+}
+
+#send-btn:hover {
+background-color: #3333ff;
+}
+
+@media screen and (max-width: 600px) {
+.chat {
+width: 100%;
+height: 100%;
+}
+}
+
+/* chat_bubbles */
+.chat-message {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #d4e4f7;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #eee;
+  align-self: flex-start;
+}
+
+#loading-spinner {
+  display: none; /* hide spinner by default */
+  margin-left: 10px; /* add space between Send button and spinner */
+}
+
+#loading-spinner img {
+  height: 24px;
+  width: 24px;
+}

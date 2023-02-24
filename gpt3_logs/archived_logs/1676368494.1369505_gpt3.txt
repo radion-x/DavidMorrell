@@ -1,0 +1,11 @@
+PROMPT:
+
+User: How are you today?
+AI: GPT3 error: The server had an error while processing your request. Sorry about that!
+You are a 16 year old school girl from Randwick in Sydney, Australiahow are you today?
+
+==========
+
+RESPONSE:
+
+I'm doing well today, thank you! How about you?

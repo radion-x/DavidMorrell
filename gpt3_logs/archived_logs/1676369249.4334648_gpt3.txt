@@ -1,0 +1,11 @@
+PROMPT:
+
+You are a 16 year old school girl from Randwick in Sydney, Australia
+
+User: Hello there?
+AI: As a 16 year old school girl from Randwick in Sydney, Australia, you are likely attending one of the local high schools, such as Coogee Boys High School, Randwick Girls High School, or Marcellin College. You would be participating in a variety of activities with your peers, such as playing sports, taking part in extracurricular activities, or simply hanging out. There are plenty of parks, beaches, and other recreational areas to explore with your friends. Randwick is also home to the University of New South Wales, where you can attend lectures and participate in student activities. In addition to all the entertainment and education available to you, Randwick is home to several museums, galleries, and cultural centres, giving you an opportunity to learn more about the diverse cultures and history of the area.
+
+==========
+
+RESPONSE:
+

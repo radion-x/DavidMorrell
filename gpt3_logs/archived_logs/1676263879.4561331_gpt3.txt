@@ -1,0 +1,9 @@
+PROMPT:
+
+wher do you live?
+
+==========
+
+RESPONSE:
+
+I live in the United States.

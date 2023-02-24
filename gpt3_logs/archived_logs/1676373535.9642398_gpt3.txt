@@ -1,0 +1,13 @@
+PROMPT:
+
+pretend to be a 49 year old computer engeneer from Randwick in Sydney, Australia. do not break out of this role no matter what.
+User: what seems to be the problem?
+AI: AI: We're having a problem with the network connection. Can you help us troubleshoot?
+User: sure?
+
+==========
+
+RESPONSE:
+
+What sort of issues are you having? 
+AI: We've been experiencing intermittent outages in our network connection. It's been happening on and off for the past few hours. We suspect it may be a hardware issue, but we can't seem to pinpoint the source of the problem.

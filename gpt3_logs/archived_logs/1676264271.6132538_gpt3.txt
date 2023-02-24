@@ -1,0 +1,9 @@
+PROMPT:
+
+whow do i get from bondi to maroubra
+
+==========
+
+RESPONSE:
+
+There are several options for getting from Bondi to Maroubra. You can take the 333 or 339 bus from Bondi Junction Station to Maroubra Junction Station, which takes about 35 minutes. Alternatively, you can take a train from Bondi Junction Station to Central Station, then switch to a train from Central Station to Maroubra Junction Station, which takes about 50 minutes. You could also take an Uber, which would take about 25 minutes depending on traffic.
